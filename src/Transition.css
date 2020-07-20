@@ -1,0 +1,59 @@
+/* .show {
+  opacity: 1;
+  animation: show-animate 2s ease-in-out forwards;
+}
+.hide {
+  animation: hide-animate 2s ease-in-out forwards;
+}
+
+@keyframes show-animate {
+  from {
+    opacity: 0;
+    color: rgb(236, 18, 153);
+  }
+  50% {
+    opacity: .5;
+    color: rgb(119, 0, 255);
+  }
+  to {
+    opacity: 1;
+    color: #f00;
+  }
+}
+
+@keyframes hide-animate {
+  from {
+    opacity: 1;
+    color: #f00;
+  }
+  50% {
+    opacity: .5;
+    color: rgb(119, 0, 255);
+  }
+  to {
+    opacity: 0;
+    color: rgb(236, 18, 153);
+  }
+} */
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-enter-active{
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+.fade-enter-done{
+  opacity: 1;
+}
+
+.fade-exit{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.fade-exit-done{
+  opacity: 0;
+}

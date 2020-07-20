@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 // import DemoParent from './DemoParent';
-import Transition from './Transition';
+// import Transition from './Transition';
+import TodoList from './TodoList';
 
-ReactDOM.render(
-  <Transition />,
+ReactDOM.render( <TodoList/> ,
   document.getElementById('root')
 );
-

@@ -36,10 +36,10 @@
   }
 } */
 
-.fade-enter{
+.fade-enter, .fade-appear{
   opacity: 0;
 }
-.fade-enter-active{
+.fade-enter-active, .fade-appear-active{
   opacity: 1;
   transition: opacity 2s ease-in-out;
 }

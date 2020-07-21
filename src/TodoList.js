@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import 'antd/dist/antd.css'
-import { Input, Button, List } from 'antd';
 import store from './store'
+import { getSagaTodoListAction, /**getTodoListData,*/ getChangeInputValueAction, getAddItemAction, getDeleteItemAction } from './store/actionCreator'
+import TodoListUI from './TodoListUI'
 
 class TodoList extends Component {
   constructor(props) {
@@ -13,51 +13,41 @@ class TodoList extends Component {
 
   render () {
     return (
-      <div style={{ marginTop: '10px', marginLeft: '10px' }}>
-        <div style={{ marginBottom: '10px' }}>
-          <Input
-            value={this.state.inputValue}
-            placeholder="todo info"
-            style={{ width: '400px', marginRight: '10px' }}
-            onChange={this.handleChangeInput}
-          />
-          <Button type="primary" onClick={this.handleAddItem}>保存</Button>
-        </div>
-        <List
-          style={{ width: '400px' }}
-          bordered
-          dataSource={this.state.list}
-          renderItem={(item, index) => (
-            <List.Item onClick={this.handleItemDelete.bind(this, index)}>
-              {item}
-            </List.Item>
-          )}
-        />
-      </div>
+      <TodoListUI
+        inputValue={this.state.inputValue}
+        list={this.state.list}
+        handleChangeInput={this.handleChangeInput}
+        handleAddItem={this.handleAddItem}
+        handleItemDelete={this.handleItemDelete}
+      />
     )
   }
 
+  componentDidMount () {
+    // 使用redux-thunk之后，能够是action返回的是一个函数，store.dispatch(action)之后，
+    // 可以使得返回的action函数，自带默认参数dispatch，然后在action里面进行dispatch派发
+    // const action = getTodoListData()
+    // store.dispatch(action)
+
+    // 使用redux-saga
+    const action = getSagaTodoListAction()
+    store.dispatch(action)
+
+  }
+
   handleItemDelete = (index) => {
-    const action = {
-      type: 'delete_item',
-      value: index
-    }
+    const action = getDeleteItemAction(index)
     store.dispatch(action)
   }
 
   handleAddItem () {
-    const action = {
-      type: 'add_item',
-    }
+    const action = getAddItemAction()
     store.dispatch(action)
   }
 
   handleChangeInput = (e) => {
     // 第一步：定义action
-    const action = {
-      type: 'change_input_value',
-      value: e.target.value
-    }
+    const action = getChangeInputValueAction(e.target.value)
     // 第二步：dispatch转发action到store中
     store.dispatch(action)
   }

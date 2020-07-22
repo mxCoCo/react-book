@@ -1,6 +1,22 @@
 import React, { Component } from 'react'
+// import React from 'react'
 import { connect } from 'react-redux';
 
+// const TodoListReactRedux = (props) => {
+//   return (
+//     <div>
+//       <div>
+//         <input value={props.inputValue} onChange={props.handleChangeInput} />
+//         <button onClick={props.handleAddItem}>保存</button>
+//       </div>
+//       <ul>
+//         {props.list.map((item, index) => {
+//           return <li key={index} onClick={() => { props.handleItemDelete(index) }}>{item}</li>
+//         })}
+//       </ul>
+//     </div>
+//   )
+// }
 class TodoListReactRedux extends Component {
   constructor(props) {
     super(props)
@@ -27,10 +43,9 @@ class TodoListReactRedux extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.list)
   return {
     inputValue: state.inputValue,
-    list: state.list,
+    list: [...state.list],// 这里如果是state的对象或者数组，必须拷贝一份赋值，不然props不会更新
   }
 }
 

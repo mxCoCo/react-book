@@ -1,18 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-// import DemoParent from './DemoParent';
-// import Transition from './Transition';
-// import TodoList from './TodoList';
-import TodoListReactRedux from './TodoList-ReactRedux';
-import store from './store1';
-import { Provider } from 'react-redux';
+import App from './App';
+import { GlobalStyle } from './styled';
 
-const App = (
-  <Provider store={store}>
-    <TodoListReactRedux />
-  </Provider>
-)
-
-ReactDOM.render(App,
+ReactDOM.render(
+  <Fragment>
+    <GlobalStyle />
+    <App />
+  </Fragment>,
   document.getElementById('root')
 );

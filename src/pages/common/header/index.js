@@ -3,6 +3,10 @@ import {
   HeaderWrapper,
   Logo,
   Nav,
+  NavItem,
+  SearchItem,
+  SearchInput,
+  Addition,
 } from './styled'
 
 export default class Header extends Component {
@@ -11,7 +15,20 @@ export default class Header extends Component {
       <Fragment>
         <HeaderWrapper>
           <Logo />
-          <Nav />
+          <Nav>
+            <NavItem className="flowLeft active">首页</NavItem>
+            <NavItem className="flowLeft">下载App</NavItem>
+            <SearchItem>{/* 搜索框 */}
+              <SearchInput />
+            </SearchItem>
+            <NavItem className="flowRight">登录</NavItem>
+            <NavItem className="flowRight" />{/* beta */}
+            <NavItem className="flowRight">Aa</NavItem>
+          </Nav>
+          <Addition>
+            <button>注册</button>
+            <button>写文章</button>
+          </Addition>
         </HeaderWrapper>
       </Fragment>
     )

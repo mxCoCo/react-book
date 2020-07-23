@@ -71,8 +71,9 @@ export const NavItem = styled.div`
   }
 `
 export const SearchItem = styled.div`
+  position: relative;
   height:38px;
-  width: 160px;
+  width: 240px;
   margin: 10px 0 0 20px;
   border-radius: 40px;
   float: left;
@@ -82,12 +83,13 @@ export const SearchInput = styled.input.attrs({
   placeholder: '搜索'
 })`
   height:36px;
-  width: 100px;
+  width: 180px;
   margin: 0 40px 0 20px;
   border: none;
   outline: none;
   font-size: 14px;
   background: #eee;
+  color: #666;
   &::placeholder {
     color: #999;
   }
@@ -113,4 +115,18 @@ export const Addition = styled.div`
       background-color: #ea6f5a;
     }
   }
+`
+
+export const BigGlass = styled.span`
+  position: absolute;
+  top:4px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  line-height:30px;
+  cursor: pointer;
+  background-color: #969696;
+  color:  #fff;
 `

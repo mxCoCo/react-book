@@ -95,7 +95,7 @@ export const SearchInput = styled.input.attrs({
     color: #999;
   }
   &.slide-enter, &.slide-appear{
-    transition: all .5s ease-out;
+    transition: all .3s ease-out;
   }
   &.slide-enter-active, &.slide-appear-active {
     width: 240px;
@@ -104,7 +104,7 @@ export const SearchInput = styled.input.attrs({
     width: 240px;
   }
   &.slide-exit {
-    transition: all .5s ease-out;
+    transition: all .3s ease-in;
   }
   &.slide-exit-active {
     width: 160px;
@@ -129,6 +129,7 @@ export const BigGlass = styled.span`
     color:  #fff;
   }
 `
+
 export const Addition = styled.div`
   position: absolute;
   top: 0;
@@ -150,4 +151,50 @@ export const Addition = styled.div`
       background-color: #ea6f5a;
     }
   }
+`
+export const SearchTip = styled.div`
+  position: absolute;
+  left: 0;
+  top: 38px;
+  width: 180px;
+  padding: 0 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  display: none;
+  &.showSearchTip {
+    display: block;
+  }
+`
+export const SearchTipTitle = styled.div`
+  margin: 20px 0 10px 0;
+  font-size: 14px;
+  color: #969696;
+`
+export const SearchTipTitleSwitch = styled.span`
+  font-size: 13px;
+  float: right;
+  cursor: pointer;
+`
+export const SearchTipList = styled.div`
+  float: left;
+  padding-bottom: 15px;
+
+`
+export const SearchTipListItem = styled.a`
+  font-size: 12px;
+  float: left;
+  line-height:20px;
+  margin: 10px 10px 0 0;
+  padding: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #787878;
+  cursor: pointer;
+
+`
+
+export const SwitchRefresh = styled.span`
+  float: left;
+  padding-right: 5px;
+  cursor: pointer;
+  
 `

@@ -5,10 +5,10 @@ import beta from '../../../static/images/diamond-beta.png'
 export const HeaderWrapper = styled.div`
   min-width: 768px;
   max-width: 1440px;
-  margin: 0 auto;
   box-sizing: border-box;
   height:58px;
   border-bottom: 1px solid #f0f0f0;
+  float: left;
 `
 export const Logo = styled.a.attrs({
   href: '/'
@@ -23,7 +23,7 @@ export const Logo = styled.a.attrs({
 export const Nav = styled.div`
   width:980px;
   height:58px;
-  margin: 0 auto;
+  margin-left: 180px;
   padding: 0 15px;
   color: #333;
   font-size: 17px;
@@ -194,7 +194,7 @@ export const SearchTipListItem = styled.a`
 
 export const SwitchRefresh = styled.span`
   float: left;
-  padding-right: 5px;
+  margin-right: 5px;
   cursor: pointer;
-  
+  transition: all .3s ease-in;
 `

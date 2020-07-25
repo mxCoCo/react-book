@@ -14,10 +14,16 @@ const defaultState = fromJS({
 export default (preState = defaultState, action) => {
   switch (action.type) {
     case GET_TIPLIST_FOCUS:
-      return preState.set('focused', action.focused)
-        .set('cacheTipList', action.cacheTipList)
-        .set('totalPage', action.totalPage)
-        .set('tipList', action.tipList) // 设置值，返回新的immutable对象
+      return preState.merge({
+        focused: action.focused,
+        cacheTipList: action.cacheTipList,
+        totalPage: action.totalPage,
+        tipList: action.tipList
+      })
+    // return preState.set('focused', action.focused)
+    //   .set('cacheTipList', action.cacheTipList)
+    //   .set('totalPage', action.totalPage)
+    //   .set('tipList', action.tipList) // 设置值，返回新的immutable对象
     case CHANGE_FOCUS_VALUE:
       return preState.set('focused', action.focused)
     case CHANGE_MOVEIN_VALUE:

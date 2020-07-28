@@ -158,6 +158,7 @@ export const SearchTip = styled.div`
   top: 38px;
   width: 180px;
   padding: 0 20px;
+  background-color: #fff;
   box-shadow: 0 0 8px rgba(0,0,0,.2);
   display: none;
   &.showSearchTip {

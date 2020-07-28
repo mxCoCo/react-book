@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "社会热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+  },
+  {
+    "id": 2,
+    "title": "新闻热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+  },
+  {
+    "id": 3,
+    "title": "申论热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+  },
+  {
+    "id": 4,
+    "title": "博客热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+  },
+  {
+    "id": 5,
+    "title": "前端热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+  },
+  {
+    "id": 6,
+    "title": "大数据热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+  },
+  {
+    "id": 7,
+    "title": "互联网热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+  },
+  {
+    "id": 8,
+    "title": "娱乐热点",
+    "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+  }
+]

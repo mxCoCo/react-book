@@ -1,5 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import Topic from './component/Topic'
+import List from './component/List'
+import Writer from './component/Writer'
+import Recommend from './component/Recommend'
 import {
   HomeWrapper,
   HomeLeft,
@@ -11,8 +15,15 @@ export class Home extends Component {
     return (
       <Fragment>
         <HomeWrapper>
-          <HomeLeft>HomeLeft</HomeLeft>
-          <HomeRight>HomeRight</HomeRight>
+          <HomeLeft>
+            <div className="banner-img"></div>
+            <Topic></Topic>
+            <List></List>
+          </HomeLeft>
+          <HomeRight>
+            <Recommend></Recommend>
+            <Writer></Writer>
+          </HomeRight>
         </HomeWrapper>
       </Fragment>
     )

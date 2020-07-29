@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import {
   CSSTransition,
 } from 'react-transition-group';
@@ -29,7 +30,9 @@ class Header extends Component {
     return (
       <Fragment>
         <HeaderWrapper>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <Nav>
             <NavItem className="flowLeft active"><i className="iconfont">&#xe786;</i> 首页</NavItem>
             <NavItem className="flowLeft"><i className="iconfont">&#xe61a;</i> 下载App</NavItem>

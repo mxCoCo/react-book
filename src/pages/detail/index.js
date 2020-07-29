@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {
+  DetailWrapper,
+} from './styled'
 
 export class Detail extends Component {
   render () {
     return (
-      <div>
+      <DetailWrapper>
         hello Detail
-      </div>
+      </DetailWrapper>
     )
   }
 }

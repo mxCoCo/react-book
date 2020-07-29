@@ -1,2 +1,7 @@
 export const GET_TOPIC_LIST = 'get_topic_list'
 export const GET_AIRTICLE_LIST = 'get_airticle_list'
+export const GET_AIRTICLE_MORE_LIST = 'get_airticle_more_list'
+export const GET_RECOMMEND_LIST = 'get_recommend_list'
+export const GET_WRITER_LIST = 'get_writer_list'
+export const CHANGE_PAGENO_LIST = 'get_pageno_list'
+export const CHANGE_SHOWSCROLL = 'get_showscroll_list'

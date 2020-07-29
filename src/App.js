@@ -8,8 +8,8 @@ export default class App extends Component {
   render () {
     return (
       <Fragment>
-        <Header />
         <BrowserRouter>
+          <Header />
           <Route path="/" exact component={Home}></Route>
           <Route path="/detail" exact component={Detail}></Route>
         </BrowserRouter>
